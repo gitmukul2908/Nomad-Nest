@@ -31,6 +31,11 @@ app.use(cookieParser());
 
 mongoose.connect(process.env.MONGO_DB_URI)
 
+// test
+app.get('/', (req, res) => {
+    res.json({"message": "Test OK"})
+})
+
 
 // to register an user
 app.post('/register', async (req, res) => {
