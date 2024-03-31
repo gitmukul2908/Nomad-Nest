@@ -21,7 +21,7 @@ const jwtSecret = "iondoaofmo329002ekopkkfdapkpkdkkdfk90k"
 app.use(express.json())
 app.use('/uploads', express.static(__dirname + '/uploads'))
 const corsOptions = {
-    origin: 'http://127.0.0.1:5173',
+    origin: 'http://nomad-nest-seven.vercel.app',
     credentials: true,            //access-control-allow-credentials:true
     optionSuccessStatus: 200
 }
@@ -245,8 +245,6 @@ app.post('/logout', (req, res) => {
 })
 
 
-app.listen(process.env.API_PORT, () => {
-    console.log("Listening on port " + process.env.API_PORT);
-})
+app.listen(process.env.API_PORT || process.env.PORT || 5000)
 
 module.exports = app
