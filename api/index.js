@@ -33,7 +33,7 @@ mongoose.connect(process.env.MONGO_DB_URI)
 
 // test
 app.get('/', (req, res) => {
-    res.json({"message": "Test OK"})
+    res.json("Test OK")
 })
 
 
