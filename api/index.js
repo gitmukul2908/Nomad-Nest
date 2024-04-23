@@ -21,7 +21,7 @@ const jwtSecret = "iondoaofmo329002ekopkkfdapkpkdkkdfk90k"
 app.use(express.json())
 app.use('/uploads', express.static(__dirname + '/uploads'))
 const corsOptions = {
-    origin: 'http://127.0.0.1:5173',
+    origin: 'http://nomad-nest-api.vercel.app',
     credentials: true,            //access-control-allow-credentials:true
     optionSuccessStatus: 200
 }
