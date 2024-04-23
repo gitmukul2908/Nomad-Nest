@@ -13,7 +13,7 @@ import PlacePage from './components/PlacePage'
 import Bookings from './components/Bookings'
 import BookingPage from './components/BookingPage'
 
-axios.defaults.baseURL = 'http://127.0.0.1:5000'
+axios.defaults.baseURL = 'http://nomad-nest-api.vercel.app'
 axios.defaults.withCredentials = true
 
 function App() {
