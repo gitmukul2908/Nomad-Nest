@@ -2,16 +2,18 @@ const express = require('express')
 const app = express()
 const cors = require('cors')
 const mongoose = require('mongoose')
+const cookieParser = require('cookie-parser')
+require('dotenv').config()
+
 const User = require('./models/User')
 const Place = require('./models/Place')
 const Booking = require('./models/Booking')
+
 const bcrypt = require('bcrypt')
 const jwt = require('jsonwebtoken')
-const cookieParser = require('cookie-parser')
 const download = require('image-downloader')
 const multer = require('multer')
 const fs = require('fs');
-require('dotenv').config()
 
 
 const bcryptSalt = bcrypt.genSaltSync(10)
@@ -21,7 +23,7 @@ const jwtSecret = "iondoaofmo329002ekopkkfdapkpkdkkdfk90k"
 app.use(express.json())
 app.use('/uploads', express.static(__dirname + '/uploads'))
 const corsOptions = {
-    origin: 'https://nomad-nest-client.vercel.app',
+    origin: 'http://127.0.0.1:5173',
     credentials: true,            //access-control-allow-credentials:true
     optionSuccessStatus: 200
 }
